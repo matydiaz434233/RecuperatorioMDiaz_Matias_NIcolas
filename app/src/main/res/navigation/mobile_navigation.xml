@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.matisoft.recuperatoriomoviles.ui.home.HomeFragment"
+        android:label="Estrenos"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/nav_detalle"
+        android:name="com.matisoft.recuperatoriomoviles.ui.home.DetalleFragment"
+        android:label="DETALLES"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_detalle_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+
+     <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.matisoft.recuperatoriomoviles.ui.slideshow.SlideshowFragment"
+        android:label="SALIR"
+        tools:layout="@layout/fragment_slideshow" />
+</navigation>
